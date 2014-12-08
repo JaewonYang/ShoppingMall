@@ -1,28 +1,28 @@
 package before_refactoring;
 
-public class Output { // °á°ú°ª, Ã¹¹øÂ°±â³äÀÏÀÌ¸§, µÎ¹øÂ°±â³äÀÏÀÌ¸§, Ã¹¹øÂ°°æ°úÀÏ, µÎ¹øÂ° °æ°úÀÏ, Ã¹¹øÂ° Å°°ª, µÎ¹øÂ°
-	// Å°°ª
+public class Output { // ï¿½ï¿½ï¿½, Ã¹ï¿½ï¿½Â°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½, ï¿½Î¹ï¿½Â°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½, Ã¹ï¿½ï¿½Â°ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Î¹ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½, Ã¹ï¿½ï¿½Â° Å°ï¿½ï¿½, ï¿½Î¹ï¿½Â°
+	// Å°ï¿½ï¿½
 public void outputDate(int r, String firstDayS, String secondDayS,
 int firstPassedDays, int secondPassedDays, int firstKey,
 int secondKey) {
 
-System.out.println("Ã¹¹øÂ° ±â³äÀÏ : " + firstDayS);
-System.out.println("µÎ¹øÂ° ±â³äÀÏ  : " + secondDayS);
-System.out.println("µÎ ±â³äÀÏ °£ÀÇ °æ°úÀÏÀº " + r + " ÀÏ ÀÔ´Ï´Ù.");
+System.out.println("ì²«ë²ˆì§¸ ê³ ë¥¸ ê¸°ë…ì¼ :" + firstDayS);
+System.out.println("ë‘ë²ˆì§¸ ê³ ë¥¸ ê¸°ë…ì¼ :" + secondDayS);
+System.out.println("ë‘ ê¸°ë…ì¼ ê°„ì˜ ê²½ê³¼ì¼ì€ " + r + " ì¼ ì…ë‹ˆë‹¤.");
 
 if (firstKey == 1 && secondKey == 0) {
-System.out.println("µÎ¹øÂ° ±â³äÀÏÀº À½·ÂÀÎ ±â³äÀÏÀÔ´Ï´Ù. µÎ¹øÂ° ±â³äÀÏÀÇ ¾ç·Â 1¿ù 1ÀÏºÎÅÍÀÇ °æ°úÀÏÀº  "
-		+ secondPassedDays+"ÀÏ ÀÔ´Ï´Ù");
+System.out.println("ë‘ë²ˆì§¸ ê¸°ë…ì¼ì€ ìŒë ¥ì¸ ê¸°ë…ì¼ì…ë‹ˆë‹¤. ë‘ë²ˆì§¸ ê¸°ë…ì¼ì˜ ì–‘ë ¥ 1ì›” 1ì¼ë¶€í„°ì˜ ê²½ê³¼ì¼ì€  "  +
+        + secondPassedDays + " ì¼ ì…ë‹ˆë‹¤");
 
 } else if (firstKey == 0 && secondKey == 1) {
-System.out.println("Ã¹¹øÂ° ±â³äÀÏÀº À½·ÂÀÎ ±â³äÀÏÀÔ´Ï´Ù. Ã¹¹øÂ° ±â³äÀÏÀÇ ¾ç·Â 1¿ù 1ÀÏºÎÅÍÀÇ °æ°úÀÏÀº  "
-		+ firstPassedDays+"ÀÏ ÀÔ´Ï´Ù");
+System.out.println("ì²«ë²ˆì§¸ ê¸°ë…ì¼ì€ ìŒë ¥ì¸ ê¸°ë…ì¼ì…ë‹ˆë‹¤. ì²«ë²ˆì§¸ ê¸°ë…ì¼ì˜ ì–‘ë ¥ 1ì›” 1ì¼ë¶€í„°ì˜ ê²½ê³¼ì¼ì€  "
+        + firstPassedDays+" ì¼ ì…ë‹ˆë‹¤");
 
 } else {
-System.out.println("µÎ ±â³äÀÏÀº ¸ğµÎ À½·ÂÀÎ ±â³äÀÏÀÔ´Ï´Ù. Ã¹¹øÂ° ±â³äÀÏÀÇ ¾ç·Â  1¿ù 1ÀÏºÎÅÍÀÇ °æ°úÀÏÀº    "
-		+ firstPassedDays
-		+ " \n µÎ¹øÂ° ±â³äÀÏÀÇ ¾ç·Â  1¿ù 1ÀÏºÎÅÍÀÇ °æ°úÀÏÀº "
-		+ secondPassedDays+"ÀÏ ÀÔ´Ï´Ù");
+System.out.println("ë‘ ê¸°ë…ì¼ì€ ëª¨ë‘ ìŒë ¥ì¸ ê¸°ë…ì¼ì…ë‹ˆë‹¤. ì²«ë²ˆì§¸ ê¸°ë…ì¼ì˜ ì–‘ë ¥  1ì›” 1ì¼ë¶€í„°ì˜ ê²½ê³¼ì¼ì€    "
+        + firstPassedDays
+        + " \n  ë‘ë²ˆì§¸ ê¸°ë…ì¼ì˜ ì–‘ë ¥  1ì›” 1ì¼ë¶€í„°ì˜ ê²½ê³¼ì¼ì€ "
+        + secondPassedDays+"ì¼ ì…ë‹ˆë‹¤");
 }
 }
 }

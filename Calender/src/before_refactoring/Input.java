@@ -7,7 +7,7 @@ public class Input {
 	private int n2;
 
 	public void getdays(int[] days, String[] daysS) {
-		System.out.println("±â³äÀÏ µÑÀ» ¼±ÅÃÇÏ¿©, ±× »çÀÌÀÇ °æ°úÀÏ¼ö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥");
+		System.out.println("ë‘ê°œì˜ ê¸°ë…ì¼ì˜ ë‚ ì§œì˜ ì°¨ì´ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ë¨ì…ë‹ˆë‹¤. ê¸°ë…ì¼ ë‘ê°œì§€ë¥¼ ê³¨ë¼ì£¼ì„¸ìš”");
 
 		for (int i = 0; i < 18; i++) {
 			System.out.print(i + 1 + ". " + days[i] + " " + daysS[i] + "   ");
@@ -18,17 +18,17 @@ public class Input {
 
 	public void inputdata() {
 		while (true) {
-			System.out.println("Ã¹¹øÂ° ±â³äÀÏÀ» °í¸£¼¼¿ä. 1~18»çÀÌÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ì²«ë²ˆì§¸ ê¸°ë…ì¼ì„ ê³ ë¥´ê² ìŠµë‹ˆë‹¤. ê¸°ë…ì¼ ì¤‘ í•˜ë‚˜ë¥¼ ê³¨ë¼ì£¼ì„¸ìš”.");
 			Scanner scan1 = new Scanner(System.in);
 			n1 = scan1.nextInt();
 
 			if (n1 >= 1 & n1 <= 17) {
-				System.out.println("µÎ¹øÂ° ±â³äÀÏÀ» °í¸£¼¼¿ä. 1~18»çÀÌÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ë‘ë²ˆì§¸ ê¸°ë…ì¼ì„ ê³ ë¥´ê² ìŠµë‹ˆë‹¤. ê¸°ë…ì¼ì¤‘ í•˜ë‚˜ë¥¼ ê³¨ë¼ì£¼ì„¸ìš”");
 				Scanner scan2 = new Scanner(System.in);
 				n2 = scan2.nextInt();
 				break;
 			} else {
-				System.out.println("Àß¸øµÈ °ªÀ» ÀÔ·ÂÇÏ¿´½À´Ï´Ù.");
+				System.out.println("ì˜ëª»ëˆ„ë¥´ì…¨ìŠµë‹ˆë‹¤. ");
 				continue;
 			}
 		}

@@ -2,45 +2,45 @@ package before_refactoring;
 
 public class Calculator {
 
-	private int[] speDaysN; // Days Å¬·¡½º¿¡¼­ °¡Á®¿Â ±â³äÀÏµé
-	private String[] speDaysS;
-	private int[] key; // ¼ýÀÚÀÇ Å°°ª, ÀÌ°ÍÀ» ÅëÇØ ¾ç·Â°ú À½·ÂÀ» ±¸ºÐ.
-	private int fkey;
-	private int skey;
+	private int[] speDaysN; // Days Å¬ï¿½ï¿½ï¿½    ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ïµï¿½
+    private String [] speDaysS;
+    private int[] key; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½, ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+    private int fkey;
+    private int skey;
 
-	private int firDate; // ±â³äÀÏÀÇ °æ°úÀÏ
+	private int firDate; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 	private int secDate;
-	private int result; // ¸®ÅÏÇØÁÙ °á°ú°ª
-	private String returnNameSFir; // »ç¿ëÀÚ°¡ °í¸¥ ±â³äÀÏ ÀÌ¸§
+	private int result; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+	private String returnNameSFir; // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½? ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
 	private String retrunNameSSec;
-	private int choosedNumFirst; // »ç¿ëÀÚ°¡ °í¸¥ ±â³äÀÏ ³¯Â¥µé
+	private int choosedNumFirst; // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½? ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½
 	private int choosedNumSecond;
 
 	Days days;
 	SunCal sunCal;
 	MoonCal moonCal;
 
-	// »ç¿ëÀÚ°¡ ¼±ÅÃÇÑ µÎ°¡Áö °ª, Days Å¬·¡½º·ÎºÎÅÍ °¡Á®¿Â ±â³äÀÏ °ª, Å°°ª
+	// ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î°ï¿½ï¿½ï¿½ ï¿½ï¿½, Days Å¬ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½, Å°ï¿½ï¿½
 	public void dayHow(int a, int b) {
 		days = new Days();
 		sunCal = new SunCal();
 		moonCal = new MoonCal();
 
-		speDaysN = days.getDateArr(); // days Å¬·¡½º¿¡¼­ ±â³äÀÏµé°ú Å°°ªµéÀ» °¡Á®¿È
+		speDaysN = days.getDateArr(); // days Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		speDaysS = days.getStr();
 		key = days.getKeyArr();
 
-		// Å°°ªÀ» ÅëÇØ °í¸¥ ±â³äÀÏÀÌ ¾ç·ÂÀÎÁö À½·ÂÀÎÁö È®ÀÎ
+		// Å°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½? ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
 		fkey = key[a];
 		skey = key[b];
 
-		choosedNumFirst = days.getDateArr()[a]; // »ç¿ëÀÚ°¡ °í¸¥ ±â³äÀÏ ³¯Â¥
+		choosedNumFirst = days.getDateArr()[a]; // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½? ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥
 		choosedNumSecond = days.getDateArr()[b];
 
-		// key°ªÀ» ÅëÇØ ¾ç·ÂÀÎÁö À½·ÂÀÎÁö ±¸ºÐÇØ¼­
+		// keyï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½
 		if (fkey == 1) {
-			sunCal.calculrateSunDays(a, choosedNumFirst); // sunCal ¿¡ »ç¿ëÀÚ°¡ °í¸¥
-															// º¯È£,
+			sunCal.calculrateSunDays(a, choosedNumFirst); // sunCal ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½?
+															// ï¿½ï¿½È£,
 			firDate = sunCal.getPassedsunMon();
 		} else {
 			moonCal.calculrateMoonDays(a, choosedNumFirst);
@@ -54,11 +54,11 @@ public class Calculator {
 			moonCal.calculrateMoonDays(b, choosedNumSecond);
 			secDate = moonCal.getPassedmoonMon();
 		}
-		returnNameSFir = speDaysS[a]; // »ç¿ëÀÚ°¡ °í¸¥ ±â³äÀÏ ¹®ÀÚ
+		returnNameSFir = speDaysS[a]; // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½? ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		retrunNameSSec = speDaysS[b];
 	}
 
-	// °æ°úÀÏ¼ö ±¸ÇÏ±â.
+	// ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½.
 	public void result() {
 		if (firDate >= secDate) {
 			result = firDate - secDate;
