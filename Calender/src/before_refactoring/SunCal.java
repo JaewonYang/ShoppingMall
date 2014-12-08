@@ -2,9 +2,9 @@ package before_refactoring;
 
 public class SunCal {
 
-	private int[] sunMon; // ¾ç·ÂÀÇ ´Þº° ³¯Â¥µéÀ» ¸ðÀº ¹è¿­
-	private int date; // °æ°úÀÏ
-	private int monNum; // »ç¿ëÀÚ°¡ °í¸¥ ³¯Â¥
+	private int[] sunMon; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þºï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+	private int date; // ï¿½ï¿½ï¿½ï¿½ï¿½
+	private int monNum; // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½? ï¿½ï¿½Â¥
 
 	public SunCal() {
 		sunMon = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -14,9 +14,9 @@ public class SunCal {
 		monNum = a - 1;
 
 		for (int i = 0; i < monNum; i++) {
-			date = sunMon[i] + date; // ¾ç·Â´Þ·ÂÀ» °¡Á®¿À°í ³¯Â¥µéÀ» ´õÇÕ´Ï´Ù.
-		}
-		date = date + (dayNum % 100);
+        date = sunMon[i] + date; // ï¿½ï¿½Â´Þ·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+    }
+    date = date + (dayNum % 100);
 	}
 
 	public int getPassedsunMon() {return date;}
