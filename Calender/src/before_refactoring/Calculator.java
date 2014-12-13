@@ -8,6 +8,7 @@ public class Calculator {
     private int fkey;
     private int skey;
 
+
 	private int firDate; // ������� �����
 	private int secDate;
 	private int result; // �������� ���
@@ -42,6 +43,8 @@ public class Calculator {
 			sunCal.calculrateSunDays(a, choosedNumFirst); // sunCal �� ����ڰ� �?
 															// ��ȣ,
 			firDate = sunCal.getPassedsunMon();
+
+
 		} else {
 			moonCal.calculrateMoonDays(a, choosedNumFirst);
 			firDate = moonCal.getPassedmoonMon();

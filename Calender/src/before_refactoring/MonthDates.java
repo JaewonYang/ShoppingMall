@@ -9,19 +9,29 @@ public class MonthDates {
     private int monNum;
     private int date;   //전달까지의 일의 수와 해당달의 일의 수를 더한 1월 1일부터 해당 기념일까지의 일의 수
 
-    private void dates() {
+    private final void dates() {
         sunMon = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         moonMon = new int[]{30, 29, 30, 29, 30, 29, 30, 29, 30, 30/* 윤달 */, 29, 30, 29};
-
     }
 
-    public void calculrateDays(int a, int dayNum) {
-        monNum = a - 1;
+    public void calculratSunDays(int a, int dayNum) {
+        monNum = a - 1;     //a는 몇월인지를 나타냄
 
         for (int i = 0; i < monNum; i++) {
-            date = sunMon[i] + date; // ��´޷��� �������� ��¥���� ���մϴ�.
+            date = sunMon[i] + date; //
         }
         date = date + (dayNum % 100);
     }
+
+    public void calculratMoonDays(int a, int dayNum) {
+        monNum = a - 1;     //a는 몇월인지를 나타냄
+
+        for (int i = 0; i < monNum; i++) {
+            date = moonMon[i] + date; //
+        }
+        date = date + (dayNum % 100);
+    }
+
+    public int getPassedDays() {return date;}
 
 }

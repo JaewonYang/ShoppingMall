@@ -1,12 +1,12 @@
 package before_refactoring;
 
 public class MoonCal {
-	private int[] moonMon; // À½·ÂÀÇ ´Þº° ³¯Â¥µéÀ» ¸ðÀº ¹è¿­
-	private int date; // °æ°úÀÏ
-	private int monNum; // »ç¿ëÀÚ°¡ °í¸¥ ³¯Â¥
+	private int[] moonMon; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þºï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+	private int date; // ï¿½ï¿½ï¿½ï¿½ï¿½
+	private int monNum; // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½? ï¿½ï¿½Â¥
 
 	public MoonCal() {
-		moonMon = new int[] { 30, 29, 30, 29, 30, 29, 30, 29, 30, 30/* À±´Þ */,
+		moonMon = new int[] { 30, 29, 30, 29, 30, 29, 30, 29, 30, 30/* ï¿½ï¿½ï¿½ï¿½ */,
 				29, 30, 29 };
 	}
 
@@ -14,12 +14,12 @@ public class MoonCal {
 		monNum = a - 1;
 
 		for (int i = 0; i <= monNum; i++) {
-			date = moonMon[i] + date; // À½·Â ´Þ·ÂÀ» °¡Á®¿À°í ³¯Â¥µéÀ» ´õÇÕ´Ï´Ù.
+			date = moonMon[i] + date; // ï¿½ï¿½ï¿½ï¿½ ï¿½Þ·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 		}
 		date = date + (dayNum % 100);
 	}
 
-	public int getPassedmoonMon() {return date;}
+    public int getPassedmoonMon() {return date;}
 
 }
 
