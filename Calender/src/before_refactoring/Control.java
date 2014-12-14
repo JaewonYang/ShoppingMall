@@ -1,8 +1,5 @@
 package before_refactoring;
 
-import before_refactoring.Input;
-import before_refactoring.Output;
-
 public class Control {
 	private int[] speDaysN;
 	private String[] speDaysS;
@@ -27,14 +24,20 @@ public class Control {
 		calculator = new Calculator();
 		days = new Days();
 
-		speDaysN = days.getDateArr();
-        speDaysS = days.getStr();
+        inputFromUser();
+        calculateData();
+        outputData();
+    }
 
+    private void inputFromUser(){
+        speDaysN = days.getDateArr();
+        speDaysS = days.getStr();
         input.getdays(speDaysN, speDaysS);
         input.inputdata();
         n1 = input.getnum1();
         n2 = input.getnum2();
-
+    }
+    private void calculateData(){
         calculator.dayHow(n1, n2);
         calculator.result();
 
@@ -45,8 +48,10 @@ public class Control {
         moonPassedDaySecond = calculator.returnPassedSecondDay();
         firstKey = calculator.returnFirstKey();
         secondKey = calculator.returnSecondKey();
-
+    }
+    private void outputData(){
         output.outputDate(resultDay, choiceFirDayS, choiceSecDayS,
                 moonPassedDayFirst, moonPassedDaySecond, firstKey, secondKey);
     }
+
 }
