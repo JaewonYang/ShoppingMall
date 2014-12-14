@@ -12,9 +12,8 @@ public class Input {
 		for (int i = 0; i < 18; i++) {
 			System.out.print(i + 1 + ". " + days[i] + " " + daysS[i] + "   ");
 		}
-		System.out.print("\n");
-
-	}
+    System.out.print("\n");
+}
 
 	public void inputdata() {
 		while (true) {

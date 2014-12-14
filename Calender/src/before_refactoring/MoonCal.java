@@ -1,12 +1,12 @@
 package before_refactoring;
 
 public class MoonCal {
-	private int[] moonMon; // ������ �޺� ��¥���� ���� �迭
-	private int date; // �����
-	private int monNum; // ����ڰ� �? ��¥
+	private int[] moonMon;
+	private int date;
+	private int monNum;
 
 	public MoonCal() {
-		moonMon = new int[] { 30, 29, 30, 29, 30, 29, 30, 29, 30, 30/* ���� */,
+		moonMon = new int[] { 30, 29, 30, 29, 30, 29, 30, 29, 30, 30/* 윤달 */,
 				29, 30, 29 };
 	}
 
@@ -14,7 +14,7 @@ public class MoonCal {
 		monNum = a - 1;
 
 		for (int i = 0; i <= monNum; i++) {
-			date = moonMon[i] + date; // ���� �޷��� �������� ��¥���� ���մϴ�.
+			date = moonMon[i] + date;
 		}
 		date = date + (dayNum % 100);
 	}

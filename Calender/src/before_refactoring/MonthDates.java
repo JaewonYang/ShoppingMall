@@ -15,19 +15,19 @@ public class MonthDates {
     }
 
     public void calculratSunDays(int a, int dayNum) {
-        monNum = a - 1;     //a는 몇월인지를 나타냄
+        monNum = a - 1;
 
         for (int i = 0; i < monNum; i++) {
-            date = sunMon[i] + date; //
+            date = sunMon[i] + date;
         }
         date = date + (dayNum % 100);
     }
 
     public void calculratMoonDays(int a, int dayNum) {
-        monNum = a - 1;     //a는 몇월인지를 나타냄
+        monNum = a - 1;
 
         for (int i = 0; i < monNum; i++) {
-            date = moonMon[i] + date; //
+            date = moonMon[i] + date;
         }
         date = date + (dayNum % 100);
     }

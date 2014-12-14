@@ -17,6 +17,6 @@ public class Days {
     }
 
     public int[] getDateArr(){return dateArr;}
-	public int[] getKeyArr(){return keyArr;}
-	public String[] getStr(){return daysStr;}
+    public int[] getKeyArr(){return keyArr;}
+    public String[] getStr(){return daysStr;}
 }

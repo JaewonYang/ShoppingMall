@@ -2,46 +2,46 @@ package before_refactoring;
 
 public class Calculator {
 
-	private int[] speDaysN; // Days Ŭ���    ����� ������ ����ϵ�
+	private int[] speDaysN;
     private String [] speDaysS;
-    private int[] key; // ������ Ű��, �̰��� ���� ��°� ������ ����.
+    private int[] key;
     private int fkey;
     private int skey;
 
 
-	private int firDate; // ������� �����
+	private int firDate;
 	private int secDate;
-	private int result; // �������� ���
-	private String returnNameSFir; // ����ڰ� �? ����� �̸�
+	private int result;
+	private String returnNameSFir;
 	private String retrunNameSSec;
-	private int choosedNumFirst; // ����ڰ� �? ����� ��¥��
+	private int choosedNumFirst;
 	private int choosedNumSecond;
 
 	Days days;
 	SunCal sunCal;
 	MoonCal moonCal;
 
-	// ����ڰ� ������ �ΰ��� ��, Days Ŭ�����κ��� ������ ����� ��, Ű��
+
 	public void dayHow(int a, int b) {
 		days = new Days();
 		sunCal = new SunCal();
 		moonCal = new MoonCal();
 
-		speDaysN = days.getDateArr(); // days Ŭ�������� ����ϵ�� Ű������ ������
+		speDaysN = days.getDateArr();
 		speDaysS = days.getStr();
 		key = days.getKeyArr();
 
-		// Ű���� ���� �? ������� ������� �������� Ȯ��
+
 		fkey = key[a];
 		skey = key[b];
 
-		choosedNumFirst = days.getDateArr()[a]; // ����ڰ� �? ����� ��¥
+		choosedNumFirst = days.getDateArr()[a];
 		choosedNumSecond = days.getDateArr()[b];
 
-		// key���� ���� ������� �������� �����ؼ�
+
 		if (fkey == 1) {
-			sunCal.calculrateSunDays(a, choosedNumFirst); // sunCal �� ����ڰ� �?
-															// ��ȣ,
+			sunCal.calculrateSunDays(a, choosedNumFirst);
+
 			firDate = sunCal.getPassedsunMon();
 
 
@@ -57,7 +57,7 @@ public class Calculator {
 			moonCal.calculrateMoonDays(b, choosedNumSecond);
 			secDate = moonCal.getPassedmoonMon();
 		}
-		returnNameSFir = speDaysS[a]; // ����ڰ� �? ����� ����
+		returnNameSFir = speDaysS[a];
 		retrunNameSSec = speDaysS[b];
 	}
 
