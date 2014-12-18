@@ -1,57 +1,57 @@
 package before_refactoring;
 
 public class Control {
-	private int[] speDaysN;
-	private String[] speDaysS;
-	private int n1;
-	private int n2;
-	private String choiceFirDayS;
-	private String choiceSecDayS;
-	private int resultDay;
-	private int moonPassedDayFirst;
-	private int moonPassedDaySecond;
-	private int firstKey;
-	private int secondKey;
+    private int[] speDaysN;     //기념일 날짜
+    private String[] speDaysS;  //기념일 이름
+    private int choosenFirstNumber;
+    private int choosenSecondNumber;
+    private String choosenSunFirstHolidayName;
+    private String choosenSunSecondHolidayName;
+    private int resultDay;
+    private int daysOfFirstHoliday;
+    private int daysOfSecondHoliday;
+    private int firstKey;
+    private int secondKey;
 
-	Input input;
-	Output output;
-	Calculator calculator;
-	Days days;
+    Input input;
+    Output output;
+    Calculator calculator;
+    Days days;
 
-	public void controlProgm() {
-		input = new Input();
-		output = new Output();
-		calculator = new Calculator();
-		days = new Days();
+    public void controlProgm() {
+        input = new Input();
+        output = new Output();
+        output = new Output();
+        calculator = new Calculator();
+        days = new Days();
 
         inputFromUser();
         calculateData();
         outputData();
     }
-
     private void inputFromUser(){
         speDaysN = days.getDateArr();
         speDaysS = days.getStr();
-        input.getdays(speDaysN, speDaysS);
+        output.showIntroduceHoliday(speDaysN, speDaysS);
         input.inputdata();
-        n1 = input.getnum1();
-        n2 = input.getnum2();
+        choosenFirstNumber = input.getFirstNumber();
+        choosenSecondNumber = input.getSecondNumber();
     }
     private void calculateData(){
-        calculator.dayHow(n1, n2);
+        calculator.dayHow(choosenFirstNumber, choosenSecondNumber);
         calculator.result();
 
         resultDay = calculator.returnDay();
-        choiceFirDayS = calculator.returnNameF();
-        choiceSecDayS = calculator.returnNameS();
-        moonPassedDayFirst = calculator.returnPassedFirstDay();
-        moonPassedDaySecond = calculator.returnPassedSecondDay();
+        choosenSunFirstHolidayName = calculator.returnNameF();
+        choosenSunSecondHolidayName = calculator.returnNameS();
+        daysOfFirstHoliday = calculator.returnPassedFirstDay();
+        daysOfSecondHoliday = calculator.returnPassedSecondDay();
         firstKey = calculator.returnFirstKey();
         secondKey = calculator.returnSecondKey();
     }
     private void outputData(){
-        output.outputDate(resultDay, choiceFirDayS, choiceSecDayS,
-                moonPassedDayFirst, moonPassedDaySecond, firstKey, secondKey);
+        output.outputResult(resultDay, choosenSunFirstHolidayName, choosenSunSecondHolidayName,
+                daysOfFirstHoliday, daysOfSecondHoliday, firstKey, secondKey);
     }
 
 }

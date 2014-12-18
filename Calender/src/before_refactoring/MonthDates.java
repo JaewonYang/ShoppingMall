@@ -14,22 +14,19 @@ public class MonthDates {
         moonMon = new int[]{30, 29, 30, 29, 30, 29, 30, 29, 30, 30/* 윤달 */, 29, 30, 29};
     }
 
-    public void calculratSunDays(int a, int dayNum) {
+    public void calculrateDays(int a, int dayNum, int key) {
         monNum = a - 1;
-
-        for (int i = 0; i < monNum; i++) {
-            date = sunMon[i] + date;
+        if (key == 1) {
+            for (int i = 0; i < monNum; i++) {
+                date = sunMon[i] + date;
+            }
+            date = date + (dayNum % 100);
+        }else{
+            for (int i = 0; i < monNum; i++) {
+                date = moonMon[i] + date;
+            }
+            date = date + (dayNum % 100);
         }
-        date = date + (dayNum % 100);
-    }
-
-    public void calculratMoonDays(int a, int dayNum) {
-        monNum = a - 1;
-
-        for (int i = 0; i < monNum; i++) {
-            date = moonMon[i] + date;
-        }
-        date = date + (dayNum % 100);
     }
 
     public int getPassedDays() {return date;}
