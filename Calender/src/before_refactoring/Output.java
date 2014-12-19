@@ -18,7 +18,7 @@ public class Output {
         System.out.println("두번째 고른 기념일 :" + secondDayName);
         System.out.println("두 기념일 간의 경과일은 " + passedDay + " 일 입니다.");
 
-        if (firstKey == 1 && secondKey == 0) {
+        if (isCerti(firstKey, secondKey)) {
             System.out.println("두번째 기념일은 음력인 기념일입니다. 두번째 기념일의 양력 1월 1일부터의 경과일은  "  +
                     + secondPassedDays + " 일 입니다");
 
@@ -32,6 +32,10 @@ public class Output {
                     + " \n  두번째 기념일의 양력  1월 1일부터의 경과일은 "
                     + secondPassedDays+"일 입니다");
         }
+    }
+
+    private boolean isCerti(int firstKey, int secondKey) {
+        return firstKey == 1 && secondKey == 0;
     }
 }
 

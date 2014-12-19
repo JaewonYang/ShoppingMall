@@ -14,8 +14,8 @@ public class MonthDates {
         moonMon = new int[]{30, 29, 30, 29, 30, 29, 30, 29, 30, 30/* 윤달 */, 29, 30, 29};
     }
 
-    public void calculrateDays(int a, int dayNum, int key) {
-        monNum = a - 1;
+    public void calculrateDays(int clientChoosenDaysNumber, int dayNum, int key) {
+        monNum = clientChoosenDaysNumber - 1;
         if (key == 1) {
             for (int i = 0; i < monNum; i++) {
                 date = sunMon[i] + date;

@@ -1,5 +1,6 @@
 package before_refactoring;
 
+//기념일들의 날짜들과 이름, 양력, 음력을 구분해주는 키값을 가지고 있는 클래스
 public class Days {
 
     private int[] dateArr;

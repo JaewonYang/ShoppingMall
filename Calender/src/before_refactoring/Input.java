@@ -11,6 +11,7 @@ public class Input {
         while (true) {
             countNumber++;
             inputInfo(countNumber);
+
             choosenFirstNumber =choosenNumber;
             if (choosenNumber >= 1 & choosenNumber <= 17) {
                 countNumber++;
