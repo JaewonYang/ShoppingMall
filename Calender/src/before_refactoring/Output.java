@@ -16,6 +16,7 @@ public class Output {
 
         System.out.println("첫번째 고른 기념일 :" + firstDayName);
         System.out.println("두번째 고른 기념일 :" + secondDayName);
+
         System.out.println("두 기념일 간의 경과일은 " + passedDay + " 일 입니다.");
 
         if (firstKey == 1 && secondKey == 0) {
@@ -32,9 +33,6 @@ public class Output {
                     + " \n  두번째 기념일의 양력  1월 1일부터의 경과일은 "
                     + secondPassedDays+"일 입니다");
         }
-    }
-    private void outputSentence(){
-
     }
 
 }

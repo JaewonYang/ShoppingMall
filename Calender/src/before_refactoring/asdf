@@ -1,0 +1,218 @@
+#num_head {
+    height: 30px;
+    width: 250px;
+    float: left;
+}
+
+#num_head1 {
+    height: 30px;
+    width: 126px;
+    background: url(tab_menu.gif) 0px -75px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_head2 {
+    height: 30px;
+    width: 124px;
+    background: url(tab_menu.gif) -126px -105px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body {
+    width: 248px;
+    padding-top: 11px;
+    border-right: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
+    border-left: 1px solid #E2E2E2;
+    clear: both;
+    float: left;
+}
+
+#num_body_box {
+    height: 12px;
+    width: 218px;
+    margin: 0 15px 13px 15px;
+    clear: both;
+    float: left;
+}
+
+#num_body_1_1 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px 0px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body_1_2 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px -25px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body_1_3 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px -50px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body_1_4 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px -75px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body_1_5 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px -100px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body_1_6 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px -125px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body_1_7 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px -150px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body_1_8 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px -175px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body_1_9 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px -200px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_body_1_10 {
+    height: 10px;
+    width: 13px;
+    margin: 1px 0px 1px 0px;
+    background: url(number.gif) 0px -225px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+
+#num_body_2 {
+    height: 12px;
+    margin-left: 8px;
+    float: left;
+}
+
+#num_body_2_first {
+    height: 12px;
+    margin-left: 8px;
+    font: bold 12px 굴림;
+    color: #4E59E7;
+    float: left;
+}
+
+#num_body_2_1 {
+    height: 12px;
+    font: 12px 굴림;
+    color: #666;
+    float: left;
+}
+
+#num_body_2_2 {
+    height: 12px;
+    font: 12px 굴림;
+    color: #333;
+    float: left;
+}
+
+#num_body_3_up {
+    height: 8px;
+    width: 7px;
+    margin: 2px 8px 2px 0px;
+    background: url(ico_map.gif) 0px -25px;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+#num_body_3_down {
+    height: 8px;
+    width: 7px;
+    margin: 2px 8px 2px 0px;
+    background: url(ico_map.gif) 0px -50px;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+#num_body_3_none {
+    height: 8px;
+    width: 7px;
+    margin: 2px 8px 2px 0px;
+    background: url(ico_map.gif) 0px 0px;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+#num_body_4 {
+    height: 11px;
+    font: 11px TAHOMA;
+    color: #999;
+    float: right;
+}
+
+#num_bottom {
+    height: 26px;
+    width: 248px;
+    background-color: #F5F5F5;
+    text-align: center;
+    float: left;
+}
+
+#num_bottom_left {
+    height: 17px;
+    width: 18px;
+    margin: 5px 3px 4px 103px;
+    background: url(btn_map.gif) 0px -50px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#num_bottom_right {
+    height: 17px;
+    width: 18px;
+    margin: 5px 103px 4px 3px;
+    background: url(btn_map.gif) 0px -25px;
+    background-repeat: no-repeat;
+    float: left;
+}

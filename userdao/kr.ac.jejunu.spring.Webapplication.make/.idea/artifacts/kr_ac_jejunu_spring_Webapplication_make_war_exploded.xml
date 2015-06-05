@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="kr.ac.jejunu.spring.Webapplication.make:war exploded">
+    <output-path>$PROJECT_DIR$/target/kr.ac.jejunu.spring.Webapplication.make</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="kr.ac.jejunu.spring.Webapplication.make" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="kr.ac.jejunu.spring.Webapplication.make/web/Web" />
+    </root>
+  </artifact>
+</component>
