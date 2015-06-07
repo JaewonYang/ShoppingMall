@@ -9,19 +9,19 @@
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource" >
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost/jeju?characterEncoding=utf-8" />
-		<property name="username" value="jeju" />
-		<property name="password" value="jejupw" />
+		<property name="url" value="jdbc:mysql://117.17.102.143/Spring?characterEncoding=utf-8" />
+		<property name="username" value="root" />
+		<property name="password" value="Starter" />
 	</bean>
 
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="typeAliasesPackage" value="kr.ac.jejuuniv.hulk.model"/>
+		<property name="typeAliasesPackage" value="kr.ac.jejuuniv.yang.model"/>
 	</bean>
 
 	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="kr.ac.jejuuniv.hulk.dao" />
+		<property name="basePackage" value="kr.ac.jejuuniv.yang.repository" />
 		<property name="annotationClass" value="org.springframework.stereotype.Repository" />
 	</bean>
 
