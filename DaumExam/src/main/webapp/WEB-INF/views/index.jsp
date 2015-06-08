@@ -12,24 +12,29 @@
 	</div>
  	<div id="Menu">
 		<a href="makeMember">회원가입</a><br/>
-		<a href="loginform">로그인</a>
+		<a href="login">로그인</a>
 	</div>
 	<div id="Content">
-		<table>
-			<caption> 쇼핑몰</caption>
+		<table width="600px">
+			<caption >쇼핑몰</caption>
 			<thead>
 				<tr>
 					<th>상품명</th>
 					<th>가격</th>
 					<th>판매자</th>
+					<th>수정</th>
+					<th>삭제하기</th>
 				</tr>
 			</thead>
 			<tbody>
+
 				<c:forEach items="${productList}" var="product">
-				<tr>
+				<tr >
 					<td><a href="info?id=${product.id}">${product.title}</a></td>
 					<td>${product.price}</td>
 					<td>${product.provider}</td>
+					<td><a href="modify">수정하기</a> </td>
+					<td><a href="delete?id=${product.id}">삭제하기</a> </td>
 				</tr>
 				</c:forEach>
 			</tbody>	

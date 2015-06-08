@@ -9,6 +9,10 @@ import kr.ac.jejuuniv.yang.model.Product;
 @Repository
 public interface ProductRepository {
 
-   List<Product> findAll();
+	List<Product> findAll();
+
+	void delete(Integer id);
+
+	void productModify(Integer id, String title, Integer price, String provider);
 
 }

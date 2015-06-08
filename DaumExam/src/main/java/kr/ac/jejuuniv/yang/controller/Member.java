@@ -8,14 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/makeMember")
 public class Member {
 	
-	private Member member;
 	
-	
-	public List<makeMember> list() {
-		return member.list();
-		
-	}
 }

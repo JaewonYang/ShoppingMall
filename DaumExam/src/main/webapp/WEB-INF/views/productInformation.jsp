@@ -4,19 +4,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>상품 정보</title>
 </head>
 <body>
-	<h1 id="productName">이름~~</h1>
-	<button id="list">목록</button>
-	<button id="modify">수정</button>
-	<div id="productInform"></div>
-	<button id="buyBtn">구매</button>
-
-	<div id="productExplain"></div>
-
-	<label id="price">15000원</label>
-	<label id="sellerName"></label>
-
+	<div id="Header">
+		상품정보
+	</div>
+	<div id="Menu">
+		<a href="list.jsp">목록보기</a><br/>
+		<a href="modify.jsp">수정하기</a>
+	</div>
+	<div id="Content">
+		<form action="save" method="POST">
+			<fieldset>
+				<legend>상품 정보 변경</legend>
+				<p>
+					<label>상품명</label>
+					<input type="text" name="id" value="${product.title}" readonly="readonly"/>
+				</p>
+				<p>
+					<label>가격</label>
+					<input type="text" name="price" value="${product.price}" readonly="readonly"/>
+				</p>
+				<p>
+					<label>판매자명</label>
+					<input type="text" name="userName" value="${user.name }" readonly="readonly"/>
+				</p>
+				<p>
+				<label>제품 설명</label>
+					<input type="textarea" value="정보" value="${user.? }" width="100px" height="50px" readonly="readonly"/>
+				</p>
+			</fieldset>
+		</form>
+	</div>
 </body>
 </html>

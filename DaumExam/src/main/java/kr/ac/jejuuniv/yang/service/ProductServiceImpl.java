@@ -18,4 +18,18 @@ public class ProductServiceImpl implements ProductService{
 	public List<Product> list(){
 		return productRepository.findAll();
 	}
+
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		productRepository.delete(id);
+		
+	}
+	
+	@Override
+	public void productModify(Integer id, String title, Integer price, String provider){
+		productRepository.productModify(id, title, price, provider);
+	}
+	
+	
 }
