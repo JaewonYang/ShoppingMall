@@ -33,7 +33,7 @@
 					<td><a href="info?id=${product.id}">${product.title}</a></td>
 					<td>${product.price}</td>
 					<td>${product.provider}</td>
-					<td><a href="modify.jeju?id=${product.id}">수정하기</a> </td>
+					<td><a href="Productmodify?id=${product.id}">수정하기</a> </td>
 					<td><a href="delete?id=${product.id}">삭제하기</a> </td>
 				</tr>
 				</c:forEach>

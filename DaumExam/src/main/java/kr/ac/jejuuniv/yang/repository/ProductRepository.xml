@@ -2,26 +2,47 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.ac.jejuuniv.yang.repository.ProductRepository">
+
+
 	<select id="findAll" resultType="Product">
 		select
 		id, title, price, provider
 		from productinfo
 	</select>
+
+
+	<update id="modifycomplete" parameterType="User">
+		update productinfo set
+		id=#{id}, title=#{title},  where id = #{id}
+	</update>
+
+
+	<select id="ProductModify" resultType="Product">
+		select
+		id, title, price,
+		provider, goodinfo
+		from productinfo where id = #{id}
+	</select>
+
+
 	<insert id="insert" parameterType="Product">
-		insert into productinfo(id,name,price,provider, goodinfo) values(#{id}, #{title}, #{price},
+		insert into
+		productinfo(id,name,price,provider, goodinfo) values(#{id}, #{title},
+		#{price},
 		#{provider}, #{goodinfo});
 	</insert>
 
 	<delete id="delete">
 		delete from productinfo where id = #{id}
 	</delete>
+
 	<select id="findById" resultType="User">
 		select
 		id, name, password
-		from userinfo where id = #{id}
+		from
+		userinfo where id = #{id}
 	</select>
 
-	<update id="modify" parameterType="User">
-		update userinfo set name=#{name}, password=#{password} where id = #{id}
-	</update>
+
+
 </mapper>

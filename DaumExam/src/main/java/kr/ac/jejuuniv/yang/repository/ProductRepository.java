@@ -15,6 +15,6 @@ public interface ProductRepository {
 
 	void insert(Integer id, String title, Integer price, String provider);
 
-	void modify(Integer id, String title, Integer price, String provider);
+	void ProductModify(Integer id, String title, Integer price, String provider, String productinfo);
 
 }

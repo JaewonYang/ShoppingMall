@@ -27,8 +27,8 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public void productModify(Integer id, String title, Integer price,
-			String provider) {
-		productRepository.modify(id, title, price, provider);
+			String provider, String goodinfo) {
+		productRepository.ProductModify(id, title, price, provider, goodinfo);
 	}
 
 }

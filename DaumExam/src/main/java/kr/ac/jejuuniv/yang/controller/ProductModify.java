@@ -19,8 +19,9 @@ public class ProductModify {
 	
 	@RequestMapping
 	public void productModify(Integer id, String title, Integer price,
-			String provider) {
-		productService.productModify(id, title, price, provider);
+			String provider, String productinfo) {
+		productService.productModify(id, title, price, provider, productinfo);
 	}
+	
 
 }

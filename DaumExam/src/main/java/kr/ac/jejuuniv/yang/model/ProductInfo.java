@@ -5,6 +5,7 @@ public class ProductInfo {
 	private String title;
 	private Integer price;
 	private String provider;
+	private String productinfo;
 	
 	public Integer getId() {
 		return id;
@@ -29,6 +30,12 @@ public class ProductInfo {
 	}
 	public void setProvider(String provider) {
 		this.provider = provider;
+	}
+	public String getProductinfo() {
+		return productinfo;
+	}
+	public void setProductinfo(String productinfo) {
+		this.productinfo = productinfo;
 	}
 	
 }
