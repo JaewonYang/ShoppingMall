@@ -1,6 +1,6 @@
 package kr.ac.jejuuniv.yang.model;
 
-public class Product {
+public class ProductInfo {
 	private Integer id;
 	private String title;
 	private Integer price;
@@ -30,6 +30,5 @@ public class Product {
 	public void setProvider(String provider) {
 		this.provider = provider;
 	}
-	
 	
 }

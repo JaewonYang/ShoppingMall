@@ -13,6 +13,8 @@ public interface ProductRepository {
 
 	void delete(Integer id);
 
-	void productModify(Integer id, String title, Integer price, String provider);
+	void insert(Integer id, String title, Integer price, String provider);
+
+	void modify(Integer id, String title, Integer price, String provider);
 
 }

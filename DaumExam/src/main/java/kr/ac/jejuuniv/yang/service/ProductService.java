@@ -3,6 +3,7 @@ package kr.ac.jejuuniv.yang.service;
 import java.util.List;
 
 import kr.ac.jejuuniv.yang.model.Product;
+import kr.ac.jejuuniv.yang.model.ProductInfo;
 
 public interface ProductService {
 
@@ -11,4 +12,6 @@ public interface ProductService {
 	void delete(Integer id);
 
 	void productModify(Integer id, String title, Integer price, String provider);
+
+	
 }

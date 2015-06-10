@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProductServiceImpl implements ProductService{
-	
+public class ProductServiceImpl implements ProductService {
+
 	@Autowired
 	private ProductRepository productRepository;
-	
+
 	@Override
-	public List<Product> list(){
+	public List<Product> list() {
 		return productRepository.findAll();
 	}
 
@@ -23,13 +23,12 @@ public class ProductServiceImpl implements ProductService{
 	public void delete(Integer id) {
 		// TODO Auto-generated method stub
 		productRepository.delete(id);
-		
 	}
-	
+
 	@Override
-	public void productModify(Integer id, String title, Integer price, String provider){
-		productRepository.productModify(id, title, price, provider);
+	public void productModify(Integer id, String title, Integer price,
+			String provider) {
+		productRepository.modify(id, title, price, provider);
 	}
-	
-	
+
 }

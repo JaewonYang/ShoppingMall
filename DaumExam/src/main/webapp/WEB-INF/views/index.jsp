@@ -13,6 +13,7 @@
  	<div id="Menu">
 		<a href="makeMember">회원가입</a><br/>
 		<a href="login">로그인</a>
+		<a href="input">상품 등록</a>
 	</div>
 	<div id="Content">
 		<table width="600px">
@@ -27,13 +28,12 @@
 				</tr>
 			</thead>
 			<tbody>
-
 				<c:forEach items="${productList}" var="product">
 				<tr >
 					<td><a href="info?id=${product.id}">${product.title}</a></td>
 					<td>${product.price}</td>
 					<td>${product.provider}</td>
-					<td><a href="modify">수정하기</a> </td>
+					<td><a href="modify.jeju?id=${product.id}">수정하기</a> </td>
 					<td><a href="delete?id=${product.id}">삭제하기</a> </td>
 				</tr>
 				</c:forEach>

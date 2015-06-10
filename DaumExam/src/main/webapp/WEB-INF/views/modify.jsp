@@ -4,23 +4,24 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>상품정보 수정</title>
-	<link href="/menu.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="resources/menu.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
 	<div id="Header">
-		상품정보변경
+		상품정보
 	</div>
 	<div id="Menu">
-		<a href="list.jsp">목록보기</a><br/>
+		<a href="index">목록보기</a><br/>
 		<a href="create.jsp">수정하기</a>
 	</div>
 	<div id="Content">
-		<form action="save" method="POST">
-			<fieldset>
+		<form action="/ProductModify" method="POST">
+		<input type="hidden" name="id" value="${product.id}" />
+			<fieldset >
 				<legend>상품 정보 변경</legend>
 				<p>
 					<label>상품명</label>
-					<input type="text" name="id" value="${product.title}"/>
+					<input type="text" name="title" value="${product.title}"/>
 				</p>
 				<p>
 					<label>가격</label>
@@ -28,11 +29,11 @@
 				</p>
 				<p>
 					<label>판매자명</label>
-					<input type="text" name="userName" value="${user.name }" />
+					<input type="text" name="userName" value="${product.name}" readonly="readonly"/>
 				</p>
 				<p>
 				<label>제품 설명</label>
-					<input type="textarea" value="정보" value="${user.? }" width="100px" height="50px"/>
+					<input type="textarea" value="정보" width="100px" height="50px"/>
 				</p>
 			</fieldset>
 		</form>
