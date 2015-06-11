@@ -11,9 +11,7 @@
 		사용자 관리
 	</div>
  	<div id="Menu">
-		<a href="makeMember">회원가입</a><br/>
-		<a href="login">로그인</a>
-		<a href="input">상품 등록</a>
+		<a href="/insert.jeju">상품 등록</a>
 	</div>
 	<div id="Content">
 		<table width="600px">
@@ -33,7 +31,7 @@
 					<td><a href="info?id=${product.id}">${product.title}</a></td>
 					<td>${product.price}</td>
 					<td>${product.provider}</td>
-					<td><a href="Productmodify?id=${product.id}">수정하기</a> </td>
+					<td><a href="modify.jeju?id=${product.id}">수정하기</a> </td>
 					<td><a href="delete?id=${product.id}">삭제하기</a> </td>
 				</tr>
 				</c:forEach>

@@ -10,10 +10,10 @@
 		from productinfo
 	</select>
 
-
-	<update id="modifycomplete" parameterType="User">
-		update productinfo set
-		id=#{id}, title=#{title},  where id = #{id}
+	<update id="productModifyComplete" parameterType="Product">
+		update productinfo 
+		set title=#{title}, price=#{price}, provider=#{provider}, goodinfo=#{goodinfo} 
+		where id = #{id}
 	</update>
 
 
@@ -25,9 +25,9 @@
 	</select>
 
 
-	<insert id="insert" parameterType="Product">
+	<insert id="productInsertComplete" parameterType="Product">
 		insert into
-		productinfo(id,name,price,provider, goodinfo) values(#{id}, #{title},
+		productinfo(id,title, price, provider, goodinfo) values(#{id}, #{title},
 		#{price},
 		#{provider}, #{goodinfo});
 	</insert>

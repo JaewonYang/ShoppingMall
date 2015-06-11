@@ -12,10 +12,9 @@
 	</div>
 	<div id="Menu">
 		<a href="index">목록보기</a><br/>
-		<a href="create.jsp">수정하기</a>
 	</div>
 	<div id="Content">
-		<form action="/ProductModify" method="POST">
+		<form action="/ProductModifyComplete" method="POST">
 		<input type="hidden" name="id" value="${product.id}" />
 			<fieldset >
 				<legend>상품 정보 변경</legend>
@@ -29,12 +28,13 @@
 				</p>
 				<p>
 					<label>판매자명</label>
-					<input type="text" name="userName" value="${product.name}" readonly="readonly"/>
+					<input type="text" name="provider" value="${product.provider}" readonly="readonly"/>
 				</p>
 				<p>
 				<label>제품 설명</label>
-					<input type="textarea" value="정보" width="100px" height="50px"/>
+					<input type="textarea" name="goodinfo" value="${product.goodinfo}" width="100px" height="50px"/>
 				</p>
+								<button type="submit" class="submitbtn">수정완료!</button>
 			</fieldset>
 		</form>
 	</div>

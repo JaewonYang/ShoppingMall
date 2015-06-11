@@ -26,9 +26,19 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public void productModify(Integer id, String title, Integer price,
-			String provider, String goodinfo) {
-		productRepository.ProductModify(id, title, price, provider, goodinfo);
+	public Product productModify(Integer id){
+		return productRepository.ProductModify(id);
+	}
+
+	@Override
+	public void productModifyComplete(Product product) {
+		productRepository.productModifyComplete(product);
+		
+	}
+
+	@Override
+	public void productInsertComplete(Product product) {
+		productRepository.productInsertComplete(product);
 	}
 
 }
