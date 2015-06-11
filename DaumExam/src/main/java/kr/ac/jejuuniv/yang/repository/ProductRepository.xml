@@ -36,6 +36,8 @@
 		delete from productinfo where id = #{id}
 	</delete>
 
+
+
 	<select id="findById" resultType="User">
 		select
 		id, name, password

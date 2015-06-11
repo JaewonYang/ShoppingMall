@@ -32,7 +32,7 @@
 				</p>
 				<p>
 				<label>제품 설명</label>
-					<input type="textarea" name="goodinfo" value="${product.goodinfo}" width="100px" height="50px"/>
+					<input type="textarea" name="goodinfo" id="productexplain" value="${product.goodinfo}" width="500px" height="50px"/>
 				</p>
 								<button type="submit" class="submitbtn">수정완료!</button>
 			</fieldset>
