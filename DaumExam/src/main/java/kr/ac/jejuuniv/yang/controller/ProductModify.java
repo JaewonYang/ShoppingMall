@@ -3,7 +3,6 @@ package kr.ac.jejuuniv.yang.controller;
 import java.util.List;
 
 import kr.ac.jejuuniv.yang.model.Product;
-import kr.ac.jejuuniv.yang.model.ProductInfo;
 import kr.ac.jejuuniv.yang.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;

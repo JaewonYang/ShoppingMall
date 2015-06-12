@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value="/insertComplete", method = {RequestMethod.GET, RequestMethod.POST})
+@RequestMapping(value = "/insertComplete")
 public class ProductInsertComplete {
 
 	@Autowired
 	ProductService productService;
 
-	private String productInsertComplete(@ModelAttribute Product product) {
+	@RequestMapping(method = RequestMethod.POST)
+	public String productInsertComplete(@ModelAttribute Product product) {
 		productService.productInsertComplete(product);
 		return "redirect:/index";
 	}

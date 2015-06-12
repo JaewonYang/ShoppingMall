@@ -7,8 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-
-
 @Controller
 @RequestMapping("loginnonPage")
 public class LoginNonPage {
@@ -18,5 +16,4 @@ public class LoginNonPage {
 	public void loginnonPage(){
 		loginService.loginnonPage();
 	}
-	
 }

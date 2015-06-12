@@ -15,7 +15,7 @@
 		<a href="index" id="sideList">목록보기</a><br/>
 	</div>
 	<div id="Content">
-		<form action="insertComplete?id=${product.id}" method="POST">
+		<form action="insertComplete" method="POST">
 		<input type="hidden" name="id" value="${product.id}" />
 			<fieldset >
 				<legend>상품 정보 변경</legend>

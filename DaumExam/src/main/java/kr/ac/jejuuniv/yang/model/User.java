@@ -1,26 +1,48 @@
 package kr.ac.jejuuniv.yang.model;
 
 public class User {
-	private String id;
-	private String name;
-	private String password;
+	private String userid;
+	private String username;
+	private String userpassword;
+	private String usertype;
+	private String usergrade;
+	private String useremail;
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getUserpassword() {
+		return userpassword;
+	}
+	public void setUserpassword(String userpassword) {
+		this.userpassword = userpassword;
+	}
+	public String getUsertype() {
+		return usertype;
+	}
+	public void setUsertype(String usertype) {
+		this.usertype = usertype;
+	}
+	public String getUsergrade() {
+		return usergrade;
+	}
+	public void setUsergrade(String usergrade) {
+		this.usergrade = usergrade;
+	}
+	public String getUseremail() {
+		return useremail;
+	}
+	public void setUseremail(String useremail) {
+		this.useremail = useremail;
+	}
 
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	
 }
