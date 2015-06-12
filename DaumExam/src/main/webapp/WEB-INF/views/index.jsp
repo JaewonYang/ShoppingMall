@@ -11,12 +11,23 @@
 <title>사용자 등록</title>
 </head>
 <body>
-	<div id="Header">사용자 관리</div>
+	<div id="Header">${sessionScope.userLoginInfo.username} 쇼핑몰
+		prototype</div>
 	<div id="Menu">
-		<a href="/insert.jeju">상품 등록</a>
+
+		<a href="/insert.jeju">상품 등록</a> </br>
+		<c:if test="${sessionScope.userLoginInfo==null}">
+			<a href="/login.jeju">로그인</a>
+			<br />
+		</c:if>
+		<c:if test="${sessionScope.userLoginInfo!=null}">
+			<a href="logout">로그아웃</a>
+			<br />
+		</c:if>
+		<a href="/joinPage.jeju">회원가임</a>
 	</div>
 	<div id="Content">
-		<table width="800px">
+		<table width="1000px">
 			<caption>쇼핑몰 prototype</caption>
 			<thead>
 				<tr>
@@ -25,16 +36,18 @@
 					<th>판매자</th>
 					<th>수정</th>
 					<th>삭제하기</th>
+					<th>판매수</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${productList}" var="product">
 					<tr>
-						<td><a href="info?id=${product.id}">${product.title}</a></td>
+						<td><a href="modify.jeju?id=${product.id}">${product.title}</a></td>
 						<td>${product.price}</td>
 						<td>${product.provider}</td>
-						<td><a href="modify.jeju?id=${product.id}">수정하기</a></td>
-						<td><a href="delete?id=${product.id}">삭제하기</a></td>
+						<td><a href="modify.jeju?id=${product.id}">수정</a></td>
+						<td><a href="delete?id=${product.id}">삭제</a></td>
+						<td>0</td>
 					</tr>
 				</c:forEach>
 			</tbody>

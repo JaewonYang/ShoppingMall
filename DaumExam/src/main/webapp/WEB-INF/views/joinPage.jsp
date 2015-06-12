@@ -3,18 +3,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>회원가입 페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="resources/menu.css" rel="stylesheet" type="text/css"
+	media="all" /><title>회원가입 페이지</title>
 </head>
 <body>
 
-	<div id="Header">쇼핑몰 prototype</div>
+	<div id="Header">쇼핑몰회원가입 prototype</div>
 	<div id="Menu">
 		<a href="index" id="sideList">목록보기</a><br />
 	</div>
 	<div id="Content">
 		<form action="userinsertComplete" method="POST">
-			<input type="hidden" name="id" value="${product.id}" />
+			<input type="hidden" name="usergrade" value="0" />
 			<fieldset>
 				<legend>회원가입</legend>
 				<p>
@@ -34,7 +35,6 @@
 						<option value="seller">판매자</option>
 						<option value="consumer">구매자</option>
 					</select>
-
 				</p>
 				<button type="submit" class="submitbtn">입력완료!</button>
 			</fieldset>
